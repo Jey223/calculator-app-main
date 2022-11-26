@@ -47,32 +47,30 @@
         </div>
       </div>
 
-      <div id="screen" class="my-[20px] w-full h-[100px] bg-screen-background-dark-blue p-[15px] rounded-[8px]">
-        <div id="screen-text" class="w-full h-full flex justify-end items-center text-[2.7rem] text-white tracking-wider">
-          1234
-        </div>
+      <div id="main-screen"  class="my-[20px] w-full h-[100px] bg-screen-background-dark-blue p-[15px] rounded-[8px]">
+        <p id="output_screen" class="w-full h-full flex justify-end overflow-hidden items-center text-[2.7rem] text-white tracking-wider">0</p>
       </div>
 
       <div id="buttons" class="w-full p-[20px] rounded-[8px] bg-toggle-and-keypad-background-dark-blue">
         <div class="grid grid-cols-[1fr_1fr_1fr_1fr] grid-rows-[45px_45px_45px_45px_45px] gap-[20px] text-[18px] tablet:text-[22px] text-dark-grayish-blue">
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">7</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">8</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">9</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-dark-blue shadow-[0px_3.5px_1px_0px] shadow-key-shadow-dark-blue rounded-[5px] cursor-pointer text-white">DEL</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">4</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">5</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">6</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">+</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">1</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">2</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">3</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">-</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">.</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">0</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">/</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">x</button>
-          <button type="submit" class="flex items-center justify-center rounded-[5px] bg-key-background-dark-blue shadow-[0px_3.5px_1px_0px] shadow-key-shadow-dark-blue col-span-2 cursor-pointer text-white">RESET</button>
-          <button type="submit" class="flex items-center justify-center bg-key-background-toggle-red shadow-[0px_3.5px_1px_0px] shadow-key-shadow-dark-red rounded-[5px] col-span-2 cursor-pointer text-white">=</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">7</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">8</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">9</button>
+          <button class="flex items-center justify-center bg-key-background-dark-blue shadow-[0px_3.5px_1px_0px] shadow-key-shadow-dark-blue rounded-[5px] cursor-pointer text-white" onclick="del()">DEL</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">4</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">5</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">6</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" id="operator">+</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">1</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">2</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">3</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" id="operator">-</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">.</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" onclick="myFunction(this)">0</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" id="operator">/</button>
+          <button class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer" id="operator">*</button>
+          <button class="flex items-center justify-center rounded-[5px] bg-key-background-dark-blue shadow-[0px_3.5px_1px_0px] shadow-key-shadow-dark-blue col-span-2 cursor-pointer text-white" onclick="reset()">RESET</button>
+          <button class="flex items-center justify-center bg-key-background-toggle-red shadow-[0px_3.5px_1px_0px] shadow-key-shadow-dark-red rounded-[5px] col-span-2 cursor-pointer text-white" onclick="calc()">=</button>
 
 
 

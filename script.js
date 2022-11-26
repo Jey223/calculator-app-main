@@ -1,3 +1,56 @@
+// onclick of Del
+
+function del(){
+    let delet = document.getElementById("output_screen").innerHTML.slice(0, -1);
+    document.getElementById("output_screen").innerHTML = delet;
+}
+
+// onclick of RESET
+function reset() {
+    document.getElementById("output_screen").innerText = '0';
+}
+
+
+
+function myFunction(ele){
+    let display = document.getElementById("output_screen").innerHTML;
+
+    if(display === "0"){
+        document.getElementById("output_screen").innerHTML = ele.innerHTML;
+    }
+    else if (display == y) {
+        document.getElementById("output_screen").innerHTML = ele.innerHTML;
+        alert("shown");
+    }
+    else{
+            document.getElementById("output_screen").innerHTML += ele.innerHTML;
+    }
+}
+
+
+let btnOperators = document.querySelectorAll("#operator");
+for (let i = 0; i < btnOperators.length; i++) {
+    btnOperators[i].addEventListener('click', () =>{
+    document.getElementById("output_screen").innerHTML += btnOperators[i].innerHTML;
+    });
+}
+
+let y = "";
+function calc() {
+    let x = document.getElementById("output_screen").innerHTML;
+    y = eval(x);
+    document.getElementById("output_screen").innerHTML = y;
+}
+
+
+
+
+
+
+
+// toggle
+
+
 let toggles = document.getElementsByTagName('input');
 let arr = [...toggles];
 
@@ -20,8 +73,8 @@ for (let i = 0; i < arr.length; i++) {
             document.getElementsByTagName("h2")[0].style.color = "hsl(0, 0%, 100%)";
             document.getElementById("p").style.color = "hsl(0, 0%, 100%)";
 
-            document.querySelector("#screen").style.backgroundColor = "hsl(224, 36%, 15%)";
-            document.querySelector("#screen-text").style.color = "hsl(0, 0%, 100%)";
+            document.querySelector("#main-screen").style.backgroundColor = "hsl(224, 36%, 15%)";
+            document.querySelector("#output_screen").style.color = "hsl(0, 0%, 100%)";
 
             document.getElementById("buttons").style.backgroundColor = "hsl(223, 31%, 20%)";
 
@@ -95,8 +148,8 @@ for (let i = 0; i < arr.length; i++) {
             document.getElementById("p").style.color = "hsl(60, 10%, 19%)";
 
 
-            document.querySelector("#screen").style.backgroundColor = "hsl(0, 0%, 93%)";
-            document.querySelector("#screen-text").style.color = "hsl(60, 10%, 19%)";
+            document.querySelector("#main-screen").style.backgroundColor = "hsl(0, 0%, 93%)";
+            document.querySelector("#output_screen").style.color = "hsl(60, 10%, 19%)";
 
             document.getElementById("buttons").style.backgroundColor = "hsl(0, 5%, 81%)";
 
@@ -165,8 +218,8 @@ for (let i = 0; i < arr.length; i++) {
             document.getElementsByTagName("h2")[0].style.color = "hsl(52, 100%, 62%)";
             document.getElementById("p").style.color = "hsl(52, 100%, 62%)";
 
-            document.querySelector("#screen").style.backgroundColor = "hsl(268, 71%, 12%)";
-            document.querySelector("#screen-text").style.color = "hsl(52, 100%, 62%)";
+            document.querySelector("#main-screen").style.backgroundColor = "hsl(268, 71%, 12%)";
+            document.querySelector("#output_screen").style.color = "hsl(52, 100%, 62%)";
 
 
             document.getElementById("buttons").style.backgroundColor = "hsl(268, 71%, 12%)";
@@ -245,6 +298,7 @@ for (let i = 0; i < arr.length; i++) {
 
 
 }
+
 
 
 
