@@ -20,7 +20,6 @@ function myFunction(ele){
     }
     else if (display == y) {
         document.getElementById("output_screen").innerHTML = ele.innerHTML;
-        alert("shown");
     }
     else{
             document.getElementById("output_screen").innerHTML += ele.innerHTML;
