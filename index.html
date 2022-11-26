@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="/dist/output.css" rel="stylesheet">
+
   
   <title>Frontend Mentor | Calculator app</title>
 
@@ -16,62 +23,78 @@
 </head>
 <body>
 
-  <main class="w-full h-screen ">
-    <section>
+  <main class="transition-[background-color] ease-in-out duration-500 w-screen h-screen flex items-center justify-center font-league-spartan bg-main-background-dark-blue">
+    <section class="w-[90%] tablet:w-6/12 laptop:w-[30%] bg-slate-300">
 
-      <div>
-        <h1>Calc</h1>
-        <div>
-          <h2>THEME</h2>
-          <div>
-            <div>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
+      <div class="flex justify-between items-center w-full h-[50px] ">
+        <h1 class="transition-colors ease-in-out duration-500 w-[50px] flex justify-center items-end h-full text-[1.7rem] text-white">calc</h1>
+        <div class="flex items-end w-[120px] justify-between ">
+          <h2 class="transition-colors ease-in-out duration-500 text-[12px] text-white">THEME</h2>
+          <div class="flex flex-col">
+            <div id="p" class="transition-colors ease-in-out duration-500 flex justify-around items-end text-white">
+              <p id="blue" class="text-[10px]">1</p>
+              <p id="gray" class="text-[10px]">2</p>
+              <p id="violet" class="text-[10px]">3</p>
             </div>
-            <div>
-              <div></div>
+            <div id="toggle-bg" class="transition-colors ease-in-out duration-700 w-[60px] bg-toggle-and-keypad-background-dark-blue flex justify-between rounded-[50px] items-center px-[3px] h-[25px]">
+              <input class="transition-opacity ease-in-out duration-700 opacity-1 h-[16px] w-[16px] appearance-none bg-key-background-toggle-red  rounded-[100%] shadow-[0px_0px_5px_1px] shadow-key-shadow-dark-red cursor-pointer" name="toggle" type="radio" id="toggleOne">
+
+              <input class="transition-opacity ease-in-out duration-700 opacity-0 h-[16px] w-[16px] appearance-none  bg-key-background-toggle-orange shadow-[0px_0px_5px_1px] shadow-key-shadow-dark-orange rounded-[100%]" name="toggle" type="radio" id="toggleTwo">
+
+              <input class="transition-opacity ease-in-out duration-700 opacity-0 h-[16px] w-[16px] appearance-none  bg-toggle-key-background-pure-cyan shadow-[0px_0px_5px_1px] shadow-key-shadow-soft-cyan  rounded-[100%]" name="toggle" type="radio" id="toggleThree">
             </div>
           </div>
         </div>
       </div>
 
-      <div>
-        <div>
-          <h3>12345</h3>
+      <div id="screen" class="my-[20px] w-full h-[100px] bg-screen-background-dark-blue p-[15px] rounded-[8px]">
+        <div id="screen-text" class="w-full h-full flex justify-end items-center text-[2.7rem] text-white tracking-wider">
+          1234
         </div>
       </div>
 
-      <div>
-        <div>
-          <div>7</div>
-          <div>8</div>
-          <div>9</div>
-          <div>DEL</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>+</div>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>-</div>
-          <div>.</div>
-          <div>0</div>
-          <div>/</div>
-          <div>x</div>
-          <div>RESET</div>
-          <div>=</div>
+      <div id="buttons" class="w-full p-[20px] rounded-[8px] bg-toggle-and-keypad-background-dark-blue">
+        <div class="grid grid-cols-[1fr_1fr_1fr_1fr] grid-rows-[45px_45px_45px_45px_45px] gap-[20px] text-[18px] tablet:text-[22px] text-dark-grayish-blue">
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">7</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">8</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">9</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-dark-blue shadow-[0px_3.5px_1px_0px] shadow-key-shadow-dark-blue rounded-[5px] cursor-pointer text-white">DEL</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">4</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">5</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">6</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">+</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">1</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">2</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">3</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">-</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">.</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">0</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">/</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-light-grayish-orange rounded-[5px] shadow-[0px_3.5px_1px_0px] shadow-key-shadow-grayish-orange cursor-pointer">x</button>
+          <button type="submit" class="flex items-center justify-center rounded-[5px] bg-key-background-dark-blue shadow-[0px_3.5px_1px_0px] shadow-key-shadow-dark-blue col-span-2 cursor-pointer text-white">RESET</button>
+          <button type="submit" class="flex items-center justify-center bg-key-background-toggle-red shadow-[0px_3.5px_1px_0px] shadow-key-shadow-dark-red rounded-[5px] col-span-2 cursor-pointer text-white">=</button>
 
 
 
+
+
+
+
+
+
+
+          
+          
         </div>
       </div>
+
+
     </section>
   </main>
 
 
 
+  <script src="./script.js"></script>
   
   
   <!-- <div class="attribution">
