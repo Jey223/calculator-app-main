@@ -1,45 +1,49 @@
-// onclick of Del
+let string = "";
+let buttons = document.querySelectorAll('.button');
+Array.from(buttons).forEach((button) => {
+    button.addEventListener('click', (e) => {
 
-function del(){
-    let delet = document.getElementById("output_screen").innerHTML.slice(0, -1);
-    document.getElementById("output_screen").innerHTML = delet;
-}
+        
+        if (e.target.innerHTML == '=') {
+            string = eval(string);
+            document.querySelector('#output_screen').innerHTML = string;
+        }
+        else if (e.target.innerHTML == 'RESET') {
+            string = "0";
+            document.querySelector('#output_screen').innerHTML = string;
+        }
+        else if (e.target.innerHTML == 'DEL') {
+            string = document.querySelector('#output_screen').innerHTML.slice(0, -1);
+            document.querySelector('#output_screen').innerHTML = string;
+            if (string == ''){
+                string = "0";
+                document.querySelector('#output_screen').innerHTML = string;
+            }
+        }
+        else if (string == "0") {
+            console.log(e.target)
+            string = e.target.innerHTML;
+            document.querySelector('#output_screen').innerHTML = string;
+        }
+        else{
+            console.log(e.target)
+            string += e.target.innerHTML;
+            document.querySelector('#output_screen').innerHTML = string;
+           
+        }
+        
+    })
+})
 
-// onclick of RESET
-function reset() {
-    document.getElementById("output_screen").innerText = '0';
-}
 
 
 
-function myFunction(ele){
-    let display = document.getElementById("output_screen").innerHTML;
-
-    if(display === "0"){
-        document.getElementById("output_screen").innerHTML = ele.innerHTML;
-    }
-    else if (display == y) {
-        document.getElementById("output_screen").innerHTML = ele.innerHTML;
-    }
-    else{
-            document.getElementById("output_screen").innerHTML += ele.innerHTML;
-    }
-}
 
 
-let btnOperators = document.querySelectorAll("#operator");
-for (let i = 0; i < btnOperators.length; i++) {
-    btnOperators[i].addEventListener('click', () =>{
-    document.getElementById("output_screen").innerHTML += btnOperators[i].innerHTML;
-    });
-}
 
-let y = "";
-function calc() {
-    let x = document.getElementById("output_screen").innerHTML;
-    y = eval(x);
-    document.getElementById("output_screen").innerHTML = y;
-}
+
+
+
 
 
 

@@ -891,6 +891,10 @@ video {
   background-color: hsl(176 100% 44% / var(--tw-bg-opacity));
 }
 
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
 .p-\[5px\] {
   padding: 5px;
 }
@@ -1293,6 +1297,37 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:bg-key-shadow-dark-red:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(6 70% 34% / var(--tw-bg-opacity));
+}
+
+.hover\:bg-key-background-toggle-red:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(6 63% 50% / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[rgb\(235_63_44\)\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 63 44 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[rgba\(208_63_47_0\.3\)\]:hover {
+  background-color: rgba(208 63 47 0.3);
+}
+
+.hover\:bg-opacity-50:hover {
+  --tw-bg-opacity: 0.5;
+}
+
+.hover\:bg-opacity-\[0\.1\]:hover {
+  --tw-bg-opacity: 0.1;
+}
+
+.hover\:bg-opacity-\[0\.3\]:hover {
+  --tw-bg-opacity: 0.3;
 }
 
 .hover\:shadow-inner:hover {
